@@ -1,0 +1,37 @@
+# default.conf
+
+server {
+    listen 80;
+    server_name ${DOMAIN_NAME} www.${DOMAIN_NAME};
+
+    location /.well-known/acme-challenge/ {
+        root /var/www/html;
+    }
+
+    location / {
+        root /var/www/html;
+        index index.html;
+    }
+}
+
+server {
+    listen 443 ssl;
+    server_name ${DOMAIN_NAME} www.${DOMAIN_NAME};
+
+    ssl_certificate /etc/letsencrypt/live/${DOMAIN_NAME}/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/${DOMAIN_NAME}/privkey.pem;
+
+    location / {
+        root /var/www/html;
+        index index.html;
+    }
+
+    # Proxy requests to GoAccess
+    # location /goaccess/ {
+    #     proxy_pass http://goaccess:7890/;
+    #     proxy_set_header Host $host;
+    #     proxy_set_header X-Real-IP $remote_addr;
+    #     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    #     proxy_set_header X-Forwarded-Proto $scheme;
+    # }
+}

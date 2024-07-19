@@ -1,0 +1,9 @@
+2024/07/19 07:06:14 [emerg] 8#8: unknown "domain_name" variable
+2024/07/19 07:08:00 [emerg] 8#8: unknown "domain_name" variable
+2024/07/19 07:10:21 [emerg] 8#8: unknown "domain_name" variable
+2024/07/19 07:11:53 [emerg] 8#8: unknown "domain_name" variable
+2024/07/19 07:11:55 [emerg] 8#8: unknown "domain_name" variable
+2024/07/19 07:13:33 [emerg] 9#9: unknown "domain_name" variable
+2024/07/19 07:14:58 [emerg] 9#9: unknown "domain_name" variable
+2024/07/19 07:18:26 [emerg] 8#8: unknown "domain_name" variable
+2024/07/19 07:24:37 [emerg] 8#8: cannot load certificate "/etc/letsencrypt/live/zhkugh.com/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/zhkugh.com/fullchain.pem, r) error:10000080:BIO routines::no such file)
